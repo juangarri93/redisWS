@@ -61,7 +61,7 @@ public class ClienteRedis {
 
 
     /**
-     * http://localhost:8080/redis/get?x=2&y=2
+     * http://localhost:8080/redis/set?x=2&y=2
      */
     @GetMapping(value="/set", params= {"x","y"}) //, produces =  "text/plain"
     public Operacion set(@RequestParam("x") String x, @RequestParam("y") String y) {
@@ -82,7 +82,7 @@ public class ClienteRedis {
 	
 
     /**
-     * http://localhost:8080/redis/set?x=2&y=2
+     * http://localhost:8080/redis/lpush?x=2&y=2
      */
     @GetMapping(value="/lpush", params= {"x","y"}) //, produces =  "text/plain"
     public Operacion lpush(@RequestParam("x") String x, @RequestParam("y") String y) {
@@ -104,7 +104,7 @@ public class ClienteRedis {
 
 
     /**
-     * http://localhost:8080/redis/set?x=2&y=2
+     * http://localhost:8080/redis/lrange?x=2&y=2&z=2
      */
     @GetMapping(value="/lrange", params= {"x","y","z"}) //, produces =  "text/plain"
     public Operacion lrange(@RequestParam("x") String x, @RequestParam("y") long y, @RequestParam("z") long z){
